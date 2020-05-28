@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 void main() => runApp(new MyApp());
-typedef void f();
-class MyApp extends StatelessWidget {
+
+
+class MyApp extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
-
-
     final wordPair = new WordPair.random();
     return new MaterialApp(
       title: 'Welcome to Flutter',
@@ -21,5 +20,11 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return null;
   }
 }
