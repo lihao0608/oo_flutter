@@ -1,30 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
+import 'ui/page/page_article.dart';
+// import "package:signalr_flutter/signalr_flutter.dart";
+//
+void main() => runApp(new ArticleApp());
 
-void main() => runApp(new MyApp());
+class ArticleApp extends StatelessWidget {
 
 
-class MyApp extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
-    final wordPair = new WordPair.random();
     return new MaterialApp(
-      title: 'Welcome to Flutter',
       home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Welcome to Flutter'),
+        appBar:  AppBar(
+          title:  Text(
+            '文章',
+            style: const TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
         ),
-        body: new Center(
-//          child: new Text('Hello World'),
-          child: new Text(wordPair.asPascalCase),
-        ),
+        body: ArticlePage(),
       ),
     );
-  }
-
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return null;
   }
 }
